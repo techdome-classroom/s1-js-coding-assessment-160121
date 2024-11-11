@@ -16,7 +16,6 @@ const decodeTheRing = function (s, p) {
       const firstMatch = i < sLen && (p[j] === s[i] || p[j] === '?');
 
       if (p[j] === '*') {
-        // '*' matches zero characters (dp[i][j+1]) or one/more characters (dp[i+1][j])
         dp[i][j] = dp[i][j + 1] || (i < sLen && dp[i + 1][j]);
       } else {
 
