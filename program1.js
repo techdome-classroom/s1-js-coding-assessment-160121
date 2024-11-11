@@ -4,15 +4,10 @@ const getTotalIsles = function (grid) {
   const rows = grid.length;
   const cols = grid[0].length;
   let islandCount = 0;
-
-  // Helper function to perform DFS and mark all connected 'L' cells
   const dfs = (r, c) => {
-    // Base case: if out of bounds or at water, return
     if (r < 0 || c < 0 || r >= rows || c >= cols || grid[r][c] === 'W') {
       return;
     }
-
-    // Mark the cell as visited by setting it to 'W'
     grid[r][c] = 'W';
     dfs(r + 1, c); 
     dfs(r - 1, c); 
