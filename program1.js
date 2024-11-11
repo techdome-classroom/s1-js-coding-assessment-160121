@@ -14,8 +14,6 @@ const getTotalIsles = function (grid) {
 
     // Mark the cell as visited by setting it to 'W'
     grid[r][c] = 'W';
-
-    // Explore the neighboring cells
     dfs(r + 1, c); 
     dfs(r - 1, c); 
     dfs(r, c + 1); 
