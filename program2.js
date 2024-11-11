@@ -7,7 +7,6 @@ const decodeTheRing = function (s, p) {
     .fill(null)
     .map(() => Array(pLen + 1).fill(false));
 
-  // Empty pattern matches an empty string
   dp[sLen][pLen] = true;
   for (let i = sLen; i >= 0; i--) {
     for (let j = pLen - 1; j >= 0; j--) {
