@@ -16,13 +16,11 @@ const getTotalIsles = function (grid) {
     grid[r][c] = 'W';
 
     // Explore the neighboring cells
-    dfs(r + 1, c); // Down
-    dfs(r - 1, c); // Up
-    dfs(r, c + 1); // Right
-    dfs(r, c - 1); // Left
+    dfs(r + 1, c); 
+    dfs(r - 1, c); 
+    dfs(r, c + 1); 
+    dfs(r, c - 1); 
   };
-
-  // Iterate through each cell in the grid
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       if (grid[r][c] === 'L') {
