@@ -26,7 +26,7 @@ const getTotalIsles = function (grid) {
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       if (grid[r][c] === 'L') {
-        // Found an unvisited land cell
+      
         islandCount++; // New island found
         dfs(r, c); // Mark the entire island
       }
