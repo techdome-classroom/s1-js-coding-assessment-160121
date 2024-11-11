@@ -24,9 +24,6 @@ const decodeTheRing = function (s, p) {
       }
     }
   }
-
-  // The answer is whether the entire s matches the entire p
-  return dp[0][0];
 };
 
 module.exports = decodeTheRing;
