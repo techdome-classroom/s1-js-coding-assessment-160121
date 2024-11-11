@@ -9,17 +9,16 @@ const getTotalIsles = function (grid) {
       return;
     }
     grid[r][c] = 'W';
-    dfs(r + 1, c); 
-    dfs(r - 1, c); 
-    dfs(r, c + 1); 
-    dfs(r, c - 1); 
+    dfs(r + 1, c);
+    dfs(r - 1, c);
+    dfs(r, c + 1);
+    dfs(r, c - 1);
   };
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
       if (grid[r][c] === 'L') {
-      
-        islandCount++; 
-        dfs(r, c); 
+        islandCount++;
+        dfs(r, c);
       }
     }
   }
