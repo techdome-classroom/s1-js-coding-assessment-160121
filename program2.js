@@ -9,8 +9,6 @@ const decodeTheRing = function (s, p) {
 
   // Empty pattern matches an empty string
   dp[sLen][pLen] = true;
-
-  // Fill the DP table from the end towards the beginning
   for (let i = sLen; i >= 0; i--) {
     for (let j = pLen - 1; j >= 0; j--) {
       const firstMatch = i < sLen && (p[j] === s[i] || p[j] === '?');
