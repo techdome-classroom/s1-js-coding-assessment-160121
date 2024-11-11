@@ -1,8 +1,6 @@
 const decodeTheRing = function (s, p) {
   const sLen = s.length;
   const pLen = p.length;
-
-  // Initialize a 2D DP array with false values
   const dp = Array(sLen + 1)
     .fill(null)
     .map(() => Array(pLen + 1).fill(false));
